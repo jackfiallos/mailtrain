@@ -20,10 +20,8 @@ let log = require('npmlog');
 
 let uploadStorage = multer.diskStorage({
     destination: (req, file, callback) => {
-        if (config.www.tmpdir) {
-            return callback(null, config.www.tmpdir);
-        }
-        let tmp = os.tmpdir();
+        log.verbose('tmpdir', os.tmpdir());
+        let tmp = config.www.tmpdir || os.tmpdir();
         let dir = pathlib.join(tmp, 'mailtrain');
         mkdirp(dir, err => {
             if (err) {
