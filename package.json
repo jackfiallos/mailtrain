@@ -54,6 +54,7 @@
     "isemail": "^2.1.2",
     "jsdom": "^9.2.1",
     "juice": "^2.0.0",
+    "mkdirp": "^0.5.1",
     "moment-timezone": "^0.5.4",
     "morgan": "^1.7.0",
     "multer": "^1.1.0",
