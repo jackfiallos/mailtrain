@@ -150,7 +150,7 @@ app.use((req, res, next) => {
     res.locals.menu = menu;
     tools.updateMenu(res);
 
-    settingsModel.list(['ua_code'], (err, configItems) => {
+    settingsModel.list(['ua_code', 'shoutout'], (err, configItems) => {
         if (err) {
             return next(err);
         }
